@@ -21,16 +21,13 @@
                 </div>
                 <div class="card__content card__padding">
                     <div class="card__share">
-                        <div class="card__social">  
-                            <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
-                            <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
-                        </div>
-                        <a id="share" class="share-toggle share-icon" href="#"></a>
+                        <a id="share" class="share-toggle share-icon" href="mailto:{{trip.driver.email}}"></a>
                     </div>
                     <div class="card__meta">
-                        <a href="#">{{trip.departure_date}}</a>
-                        <time>{{trip.driver.name}}</time>
+                        <ul>
+                        <li><a href="#">{{trip.departure_date}}</a></li>
+                        <li><time>{{trip.driver.name}}</time></li>
+                        </ul>
                     </div>
                     <article class="card__article">
                         <h2><a href="#">{{trip.departure_time}}</a></h2>
