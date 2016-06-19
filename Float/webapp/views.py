@@ -18,14 +18,22 @@ def search_result(request):
 	if request.method == 'POST':
 		form = SearchForm(request.POST)
 		if form.is_valid():
-			trips = Trip()
+			#get search details
 			departure = form.cleaned_data['departure']
 			arrival = form.cleaned_data['arrival']
 			date = form.cleaned_data['date']
-			distance_dict = gmaps.distance_matrix(departure,arrival)
-			distance1 = distance_dict['rows'][0]['elements'][0]['distance']['value']
-			#query trips 
+
+			#get all trips
+			trips = Trip()
 			trips = Trip.objects.all()
+
+			for trip in trips:
+				distance_dict = gmaps.distance_matrix(trip.departure_city,trip.arrival_city)
+				distance1 = distance_dict['rows'][0]['elements'][0]['distance']['value']
+				trip.distance = distance1/1000
+				trip.save
+
+			#query trips 
 	return render(request, 'search_result.html', {'trips': trips})
 
 # Create your views here.

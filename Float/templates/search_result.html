@@ -80,16 +80,17 @@
                         </ul>
                     </div>
                     <article class="card__article">
-                        <h2><a href="#">{{trip.departure_time}}</a></h2>
-                        <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
+                        <h2><a href="#">{{trip.departure_time}}&nbsp;({{trip.departure_city}}&nbsp;->&nbsp;{{trip.arrival_city}})</a></h2>
+                        <p>{{trip.message}}</p>
+                        <p>{{trip.distance}}KM</p>
                     </article>
                 </div>
 
                 <div class="card__action">
                     <div class="card__author">
-                        <img class="circle" src="http://2.bp.blogspot.com/-JwmsbYTNpvg/Vh4ZUF2i2QI/AAAAAAABEWk/EaqqC72hj9w/s1600/Honda-Civic-Type-R-Sedan-0.jpg" alt="user">
+                        <img class="circle" src="{{trip.driver.car_picture}}" alt="user">
                         <div class="card__author-content">
-                            2003 <a href="#">Honda Civic</a>
+                            {{trip.driver.car_year}} <a href="#">{{trip.driver.car_make}}</a>
                         </div>
                     </div>
                 </div>
