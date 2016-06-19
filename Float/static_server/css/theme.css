@@ -13,8 +13,16 @@ body {
   /*background-position:center center;*/        
 }
 
-.search {
+@font-face {
+  font-family: 'wisdom';
+  src: url('/static/Wisdom Script AJ.otf')
+}
+
+.search1 {
 	margin-top: 10%;
+}
+.search2 {
+  margin-top: 3%;
 }
 
 .search .form-section{
@@ -22,11 +30,6 @@ body {
 	border: 2px solid #414141;
 	border-radius: 5px;
 	padding: 10px;
-}
-
-@font-face {
-  font-family: 'wisdom';
-  src: url('/static/Wisdom Script AJ.otf')
 }
 
 h1 { 
