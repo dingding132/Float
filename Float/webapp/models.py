@@ -7,6 +7,7 @@ class Driver(models.Model):
 	picture = models.CharField(max_length=200)
 	car_make = models.CharField(max_length=50)
 	car_year = models.IntegerField()
+	car_picture = models.CharField(max_length=200)
 
 class Trip(models.Model):
 	id =  models.AutoField(primary_key=True)
