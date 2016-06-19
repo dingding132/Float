@@ -40,19 +40,19 @@ a {
         color: #2980b9;
     }
 
-h1 { 
+h1{
   color: #fff; 
   font-family: 'wisdom'; 
   font-size: 70px; 
   text-align: left;
   margin-left:10px;
   margin-top: -10px; 
-  }
+}
 
 .logo1{
     float: left;
     margin: 0 0 10px 10px;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 .search {
