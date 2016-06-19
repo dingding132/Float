@@ -17,4 +17,5 @@ class Trip(models.Model):
 	departure_time = models.TimeField()
 	departure_city = models.CharField(max_length=200)
 	arrival_city = models.CharField(max_length=200)
-	distance = models.IntegerField()
+	distance = models.IntegerField(null=True, blank=True)
+	message = models.CharField(max_length=800)
