@@ -10,6 +10,8 @@ def index(request):
 	return render(request, 'home.html')
 
 def search_result(request):
+	if request.method == 'GET':
+		return render(request,'search_result.html')
 	if request.method == 'POST':
 		form = SearchForm(request.POST)
 		if form.is_valid():
