@@ -222,7 +222,7 @@ h1 {
     z-index: 2;
 }
 .share-toggle:before {
-    content: "\f1e0";
+    content: '\f003';
     font-family: 'FontAwesome';
     color: #3498db;
 }
