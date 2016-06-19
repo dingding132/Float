@@ -29,3 +29,5 @@ def search_result(request):
 	return render(request, 'search_result.html', {'trips': trips})
 
 # Create your views here.
+
+
