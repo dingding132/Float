@@ -25,7 +25,7 @@ def search_result(request):
 			distance_dict = gmaps.distance_matrix(departure,arrival)
 			distance1 = distance_dict['rows'][0]['elements'][0]['distance']['value']
 			#query trips 
-			trips = Trip.objects.filter(departure_city=departure).filter(arrival_city=arrival).filter(departure_date=date)
+			trips = Trip.objects.all()
 	return render(request, 'search_result.html', {'trips': trips})
 
 # Create your views here.
