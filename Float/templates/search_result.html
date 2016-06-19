@@ -10,10 +10,102 @@
 
 <body>
 <table>
+ 
+<div class="wrap">
+<span class="decor"></span>
+<nav>
+  <ul class="primary">
+    <li>
+      <a href="">Dog</a>
+      <ul class="sub">
+        <li><a href="">Bulldog</a></li>
+        <li><a href="">Mastiff</a></li>
+        <li><a href="">Labrador</a></li>
+        <li><a href="">Mutt</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="">Cat</a>
+      <ul class="sub">
+        <li><a href="">Tabby</a></li>
+        <li><a href="">Black Cat</a></li>
+        <li><a href="">Wrinkly Cat</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="">Bird</a>
+      <ul class="sub">
+        <li><a href="">Humming Bird</a></li>
+        <li><a href="">Hawk</a></li>
+        <li><a href="">Crow</a></li>
+      </ul>  
+    </li>
+    <li>
+      <a href="">Horse</a>
+      <ul class="sub">
+        <li><a href="">Brown Horse</a></li>
+        <li><a href="">Race Horse</a></li>
+        <li><a href="">Tall Horse</a></li>
+      </ul>  
+    </li>
+    <li>
+      <a href="">Burger</a>
+      <ul class="sub">
+        <li><a href="">Cheesy</a></li>
+        <li><a href="">More Ketchup</a></li>
+        <li><a href="">Some Mustard</a></li>
+        <li><a href="">Extra Butter</a></li>
+      </ul>  
+    </li>
+  </ul>
+</nav>
+</div>
+
+<div class="container">
+    {% for trip in trips %}
+    <div class="wrapper">
+            <div class="card radius shadowDepth1">
+                <div class="card__image border-tlr-radius">
+                    <img src="{{trip.driver.picture}}" alt="image" class="border-tlr-radius">
+                </div>
+                <div class="card__content card__padding">
+                    <div class="card__share">
+                        <div class="card__social">  
+                            <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
+                            <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
+                            <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
+                        </div>
+                        <a id="share" class="share-toggle share-icon" href="#"></a>
+                    </div>
+                    <div class="card__meta">
+                        <a href="#">{{trip.departure_date}}</a>
+                        <time>{{trip.driver.name}}</time>
+                    </div>
+                    <article class="card__article">
+                        <h2><a href="#">{{trip.departure_time}}</a></h2>
+                        <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
+                    </article>
+                </div>
+
+                <div class="card__action">
+                    <div class="card__author">
+                        <img class="circle" src="http://2.bp.blogspot.com/-JwmsbYTNpvg/Vh4ZUF2i2QI/AAAAAAABEWk/EaqqC72hj9w/s1600/Honda-Civic-Type-R-Sedan-0.jpg" alt="user">
+                        <div class="card__author-content">
+                            2003 <a href="#">Honda Civic</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+  <!-- {% for trip in trips %}
   <div class="wrapper">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
-                    <img src="https://scontent-iad3-1.xx.fbcdn.net/t31.0-8/12890901_1087582041299535_1078295890472085703_o.jpg" alt="image" class="border-tlr-radius">
+                    <img src="{{trip.driver.picture}}" alt="image" class="border-tlr-radius">
                 </div>
                 <div class="card__content card__padding">
                     <div class="card__share">
@@ -25,11 +117,11 @@
                         <a id="share" class="share-toggle share-icon" href="#"></a>
                     </div>
                     <div class="card__meta">
-                        <a href="#">June 29, 2016</a>
-                        <time>John Wu</time>
+                        <a href="#">{{trip.departure_date}}</a>
+                        <time>{{trip.driver.name}}</time>
                     </div>
                     <article class="card__article">
-                        <h2><a href="#">7:00pm</a></h2>
+                        <h2><a href="#">{{trip.departure_time}}</a></h2>
                         <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
                     </article>
                 </div>
@@ -44,111 +136,11 @@
                 </div>
             </div>
         </div>
+        {% endfor %} -->
+        </body>
+</html>
 
 
-  <div class="wrapper">
-            <div class="card radius shadowDepth1">
-                <div class="card__image border-tlr-radius">
-                    <img src="https://scontent-iad3-1.xx.fbcdn.net/t31.0-8/12890901_1087582041299535_1078295890472085703_o.jpg" alt="image" class="border-tlr-radius">
-                </div>
-                <div class="card__content card__padding">
-                    <div class="card__share">
-                        <div class="card__social">  
-                            <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
-                            <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
-                        </div>
-                        <a id="share" class="share-toggle share-icon" href="#"></a>
-                    </div>
-                    <div class="card__meta">
-                        <a href="#">June 29, 2016</a>
-                        <time>John Wu</time>
-                    </div>
-                    <article class="card__article">
-                        <h2><a href="#">7:00pm</a></h2>
-                        <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
-                    </article>
-                </div>
 
-                <div class="card__action">
-                    <div class="card__author">
-                        <img class="circle" src="http://2.bp.blogspot.com/-JwmsbYTNpvg/Vh4ZUF2i2QI/AAAAAAABEWk/EaqqC72hj9w/s1600/Honda-Civic-Type-R-Sedan-0.jpg" alt="user">
-                        <div class="card__author-content">
-                            2003 <a href="#">Honda Civic</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-          <div class="wrapper">
-            <div class="card radius shadowDepth1">
-                <div class="card__image border-tlr-radius">
-                    <img src="https://scontent-iad3-1.xx.fbcdn.net/t31.0-8/12890901_1087582041299535_1078295890472085703_o.jpg" alt="image" class="border-tlr-radius">
-                </div>
-                <div class="card__content card__padding">
-                    <div class="card__share">
-                        <div class="card__social">  
-                            <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
-                            <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
-                        </div>
-                        <a id="share" class="share-toggle share-icon" href="#"></a>
-                    </div>
-                    <div class="card__meta">
-                        <a href="#">June 29, 2016</a>
-                        <time>John Wu</time>
-                    </div>
-                    <article class="card__article">
-                        <h2><a href="#">7:00pm</a></h2>
-                        <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
-                    </article>
-                </div>
-
-                <div class="card__action">
-                    <div class="card__author">
-                        <img class="circle" src="http://2.bp.blogspot.com/-JwmsbYTNpvg/Vh4ZUF2i2QI/AAAAAAABEWk/EaqqC72hj9w/s1600/Honda-Civic-Type-R-Sedan-0.jpg" alt="user">
-                        <div class="card__author-content">
-                            2003 <a href="#">Honda Civic</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-          <div class="wrapper">
-            <div class="card radius shadowDepth1">
-                <div class="card__image border-tlr-radius">
-                    <img src="https://scontent-iad3-1.xx.fbcdn.net/t31.0-8/12890901_1087582041299535_1078295890472085703_o.jpg" alt="image" class="border-tlr-radius">
-                </div>
-                <div class="card__content card__padding">
-                    <div class="card__share">
-                        <div class="card__social">  
-                            <a class="share-icon facebook" href="#"><span class="fa fa-facebook"></span></a>
-                            <a class="share-icon twitter" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="share-icon googleplus" href="#"><span class="fa fa-google-plus"></span></a>
-                        </div>
-                        <a id="share" class="share-toggle share-icon" href="#"></a>
-                    </div>
-                    <div class="card__meta">
-                        <a href="#">June 29, 2016</a>
-                        <time>John Wu</time>
-                    </div>
-                    <article class="card__article">
-                        <h2><a href="#">7:00pm</a></h2>
-                        <p>I'll be leaving from McGill campus and dropping off in downtown Ottawa</p>
-                    </article>
-                </div>
-
-                <div class="card__action">
-                    <div class="card__author">
-                        <img class="circle" src="http://2.bp.blogspot.com/-JwmsbYTNpvg/Vh4ZUF2i2QI/AAAAAAABEWk/EaqqC72hj9w/s1600/Honda-Civic-Type-R-Sedan-0.jpg" alt="user">
-                        <div class="card__author-content">
-                            2003 <a href="#">Honda Civic</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
