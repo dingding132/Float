@@ -16,32 +16,33 @@
 <body>
 <h1>Float</h1>
 <h2>Where do you want to go?</h2>
+
   <div class="search">
     <div class="container">
         <div class="row">
           <div class="col-md-11 col-md-offset-1">
             <div class="form-section">
               <div class="row">
-                  <form role="form" action = "search_result/" method = "get">
+                  <form role="form" action = "search_result/" method = "POST"> {% csrf_token %}
                     <div class="col-md-4">
                       <div class="form-group">
-                        <label class="sr-only" for="location">Where to?</label>
-                          <input type="email" class="form-control" id="location" placeholder="From Where ?">
+                        <label class="sr-only" for="departure">Where to?</label>
+                          <input id = "departure" name = "departure" type="text" class="form-control" placeholder="From Where ?" maxlength = "200">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
-                          <label class="sr-only" for="checkin">From</label>
+                          <label class="sr-only" for="arrival">From</label>
                           <div class="form-group">
-                            <input type="text" class="form-control" id="checkin" placeholder="To Where ?">
+                            <input id = "arrival" name = "arrival" type="text" class="form-control"  placeholder="To Where ?" maxlength = "200">
                           </div>
                       </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                          <label class="sr-only" for="checkout">To</label>
+                          <label class="sr-only" for="date">To</label>
                           <div class="input-group">
-                            <input type="text" class="form-control" id="checkout" placeholder="When ?">
+                            <input id= "date" name= "date" type="text" class="form-control" placeholder="When ?">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                           </div>
                         </div>

@@ -15,14 +15,12 @@ def search_result(request):
 	if request.method == 'POST':
 		form = SearchForm(request.POST)
 		if form.is_valid():
-			depature = form.cleaned_data['departure']
-			arrival = form.cleaned_date['arrival']
+			trips = Trip()
+			departure = form.cleaned_data['departure']
+			arrival = form.cleaned_data['arrival']
 			date = form.cleaned_data['date']
 			#query trips 
-			trips = Trips.objects.filter(departure_city=departure).filter(arrival_city=arrival).filter(departure_date=date)
-
+			trips = Trip.objects.filter(departure_city=departure).filter(arrival_city=arrival).filter(departure_date=date)
 	return render(request, 'search_result.html', {'trips': trips})
-
-
 
 # Create your views here.

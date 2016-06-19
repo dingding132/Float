@@ -14,7 +14,7 @@ $(window).ready(function(){
 	        checkin.hide();
 	        $('#checkout')[0].focus();
 	      }).data('datepickr');*/
-	      var checkout = $('#checkout').datepicker({
+	      var chekcout = $('#date').datepicker({
 	        onRender: function(date) {
 	          return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
 	        }
