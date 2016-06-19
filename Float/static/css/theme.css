@@ -1,17 +1,17 @@
 body {
-  /*padding-top: 40px;
-  padding-bottom: 40px;*/
-  background-image:url(/static/img/home_img.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('/static/img/home_img.jpg');
   background-size:cover;
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-position: center center;
+  background-color: rgba(0, 0, 0, 1);
+
   /*background-color:#000000;*/
   /*background-position:center center;*/        
 }
 
 .search {
-	margin-top: 5%;
+	margin-top: 1%;
 }
 
 .search .form-section{
@@ -22,8 +22,8 @@ body {
 }
 
 h1 { 
-  margin-top:10%;
-  margin-bottom:2%;
+  margin-top:1%;
+  margin-bottom:1%;
   color: #fff; 
   font-family: 'Helvetica Neue', sans-serif; 
   font-size: 230px;
