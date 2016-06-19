@@ -1,7 +1,7 @@
 $(window).ready(function(){
 	      var nowTemp = new Date();
 	      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-	      var checkin = $('#checkin').datepicker({
+	     	/* checkin = $('#checkin').datepicker({
 	        onRender: function(date) {
 	          return date.valueOf() < now.valueOf() ? 'disabled' : '';
 	        }
@@ -13,7 +13,7 @@ $(window).ready(function(){
 	        }
 	        checkin.hide();
 	        $('#checkout')[0].focus();
-	      }).data('datepicker');
+	      }).data('datepickr');*/
 	      var checkout = $('#checkout').datepicker({
 	        onRender: function(date) {
 	          return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
