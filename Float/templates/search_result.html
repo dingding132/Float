@@ -3,14 +3,64 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="/webapp/static/css/search.css"></link>
+<link rel="stylesheet" type="text/css" href="/webapp/static/css/bootstrap.css"></link>
+<link href="/webapp/static/css/bootstrap-datepicker.css" rel="stylesheet"> 
 
-<script src='webapp/static/js/search.js'></script>
+<script src='/webapp/static/js/jquery.js'></script>
+<script src='/webapp/static/js/calendar.js'></script>
+<script src="/webapp/static/js/bootstrap-datepicker.js"></script>
+<script src="/webapp/static/js/bootstrap.js"></script>
+<script src='/webapp/static/js/search.js'></script>
 
 </head>
 
 <body>
 
-<h1> We found a carpool for you! </h1>
+<div id="logo">
+<img class = logo1 src="/webapp/static/img/icon.png" height="80" width="80">
+</img>
+<h1>Float</h1>
+ <div class="search2">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-11 col-md-offset-1">
+            <div class="form-section">
+              <div class="row">
+                  <form role="form" action = "search_result/" method = "POST"> {% csrf_token %}
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="sr-only" for="departure">Where to?</label>
+                          <input id = "departure" name = "departure" type="text" class="form-control" placeholder="From Where ?" maxlength = "200">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                          <label class="sr-only" for="arrival">From</label>
+                          <div class="form-group">
+                            <input id = "arrival" name = "arrival" type="text" class="form-control"  placeholder="To Where ?" maxlength = "200">
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                          <label class="sr-only" for="date">To</label>
+                          <div class="input-group">
+                            <input id= "date" name= "date" type="text" class="form-control" placeholder="When ?">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                      <button type="submit" class="btn btn-default btn-primary">Search</button>
+                    </div>
+                   </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
 
 <div class="container">
     {% for trip in trips %}
@@ -47,6 +97,7 @@
                     </div>
                 </div>
             </div>
+            <span class="stretch"></span>
         </div>
         {% endfor %}
     </div>
