@@ -63,7 +63,7 @@
 </div>
 
 <div class="container">
-    {% for trip in trips %}
+    {% for trip in trips1 %}
     <div class="wrapper">
             <div class="card radius shadowDepth1">
                 <div class="card__image border-tlr-radius">
@@ -82,7 +82,7 @@
                     <article class="card__article">
                         <h2><a href="#">{{trip.departure_time}}&nbsp;({{trip.departure_city}}&nbsp;->&nbsp;{{trip.arrival_city}})</a></h2>
                         <p>{{trip.message}}</p>
-                        <p>{{trip.distance}}KM</p>
+                        <p>Total Distance:&nbsp;{{trip.distance}}KM</p>
                     </article>
                 </div>
 
