@@ -15,3 +15,4 @@ class Trip(models.Model):
 	departure_city = models.CharField(max_length=200)
 	arrival_city = models.CharField(max_length=200)
 
+
