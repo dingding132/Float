@@ -25,10 +25,6 @@ body {
 }
 
 @font-face {
-  font-family: 'calendas_plus';
-  src: url('/static/Calendas_Plus.ttf')
-}
-@font-face {
   font-family: 'wisdom';
   src: url('/static/Wisdom Script AJ.otf')
 }
